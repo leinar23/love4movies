@@ -1,0 +1,9 @@
+@font-face {
+    font-family: ESE;
+    src: url(../fonts/EncodeSansExpanded-Regular.ttf);
+}
+
+@font-face {
+    font-family: ESE_light;
+    src: url(../fonts/EncodeSansExpanded-Light.ttf);
+}

@@ -3,6 +3,7 @@ body {
     background-image: url("../img/background-image.jpg");
     background-size: auto 100vh;
     background-position: center;
+    font-family: ESE;
 }
 
 main {
@@ -18,8 +19,8 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 350px;
-    background-color: white;
+    width: 25vw;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     text-align: center;
 }
@@ -28,19 +29,30 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 170px;
-    margin-top: 20px;
+    height: 25vh;
+    margin-top: 3vh;
+    width: 60%;
 }
 
 .logo {
     position: absolute;
-    background-color: white;
-    transform: translateY(-65px);
+    background-color: var(--darker-color);
+    transform: translateY(-80px);
     border-radius: 50%;
 }
 
 .logo > img {
-    width: 75px;
+    width: 100px;
     height: auto;
-    padding: 15px;
+    padding: 20px;
+}
+
+.forgot-password {
+    background-color: var(--darker-color);
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 20px;
+    color: var(--lighter-color);
+    padding: 15px 0px 15px 0px;
 }
