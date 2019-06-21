@@ -19,7 +19,7 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 25vw;
+    width: 450px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     text-align: center;
@@ -29,20 +29,21 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 25vh;
-    margin-top: 3vh;
+    height: 250px;
+    /* margin-top: 3vh; */
     width: 60%;
 }
 
 .logo {
     position: absolute;
     background-color: var(--darker-color);
-    transform: translateY(-80px);
+    top: calc(-100vh / 9.5);
     border-radius: 50%;
 }
 
 .logo > img {
-    width: 100px;
+    width: calc(100vh / 12);
+    max-width: 90px;
     height: auto;
     padding: 20px;
 }
@@ -55,4 +56,28 @@ main {
     margin-top: 20px;
     color: var(--lighter-color);
     padding: 15px 0px 15px 0px;
+}
+
+@media all and (max-width: 480px) {
+    .login {
+        width: calc((450 * 100vw) / 479);
+    }
+    
+    .data {
+        width: 270px;
+        max-width: 90%;
+    }
+}
+
+@media all and (max-height: 500px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media all and (max-height: 350px) {
+    .data {
+        height: calc((250 * 100vh) / 350);
+        margin-top: 0;
+    }
 }
