@@ -13,7 +13,6 @@
 .navbar-list {
     display: flex;
     list-style-type: none;
-    background-color: darkgoldenrod;
     height: 100%;
     width: 500px;
     padding-inline-start: 0;
@@ -23,11 +22,12 @@
 .navbar-item {
     display: flex;
     justify-content: space-around;
-    color: white;
-    background-color: var(--main-color);
+    color: var(--lighter-color);
+    background-color: var(--darker-color);
     width: 100%;
     text-align: center;
     font-family: ESE;
+    transition: background-color .1s linear;
 }
 
 .navbar-item:hover {
@@ -53,28 +53,38 @@
     height: 40px;
 }
 
-#sections:hover ~ .sections {
-    display: inherit;
+#sections {
+    padding-inline-start: 0;
 }
 
 .sections {
     display: none;
+    opacity: 0;
     position: absolute;
     font-family: ESE;
-    left: calc(15px + 40px + 15px + (500px / 3));
+    left: calc(15px + 40px + 15px);
     top: 50px;
     background-color: var(--emphasis-color);
-    width: calc(500px / 3);
+    width: calc(500px / 2);
+    transition: opacity .2 linear;
 }
 
-.sections > ul {
+.sections > li {
+    position: relative;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px 15px;
+    background-color: var(--main-color);
+    transition: background-color .1s linear;
 }
 
-.sections > ul > li {
-    padding: 10px 15px;
+.sections > li:hover {
+    background-color: var(--emphasis-color);
+    color: var(--darker-color);
+}
+
+.sections > li:hover > a {
+    color: var(--darker-color);
 }
 
 #search-bar {
@@ -87,10 +97,15 @@
 
 #show {
     z-index: 2;
+    height: 50px;
+    width: calc(500px / 3);
     position: absolute;
+    display: initial;
+    cursor: pointer;
     opacity: 0;
 }
 
 #show:checked ~ .sections {
-    display: inherit;
+    display: initial;
+    opacity: 1;
 }

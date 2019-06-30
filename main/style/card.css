@@ -6,13 +6,24 @@
 .section-container > h1 {
     background-color: var(--darker-color);
     color: var(--lighter-color);
-    padding: 5px 20px;
-    margin: 0;
+    padding: 10px 30px;
+    margin: 10px 0 0 0;
+    border-radius: 100px;
 }
 
 .card-container {
     overflow-x: auto;
     padding: 30px 0;
+}
+
+.card-container::-webkit-scrollbar {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background-color: var(--darker-color);
+    border-radius: 20px;
 }
 
 .card-section {
@@ -24,16 +35,15 @@
     width: 280px;
     height: 400px;
     perspective: 1500px;
-    cursor: pointer;
 }
 
 .card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .card:hover .card-inner {
@@ -54,8 +64,9 @@
 
 .card-back {
     background-color: var(--secondary-color);
+    color: var(--darker-color);
     font-family: ESE_light;
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 
 .card-back > p, h2 {

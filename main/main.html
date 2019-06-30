@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="./style/var.css">
     <link rel="stylesheet" href="./style/fonts.css">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/navbar.css">
-    <link rel="stylesheet" href="./style/secciones.css">
     <link rel="stylesheet" href="./style/card.css">
+    <link rel="stylesheet" href="./style/navbar.css">
     <link rel="shortcut icon" href="img/logo/favicon.png" />
     <title>Love 4 Movies</title>
 </head>
@@ -17,26 +16,26 @@
     <nav class="navbar">
         <img src="img/logo/logo-250.png" alt="logo">
         <ul class="navbar-list">
-            <li class="navbar-item"><a href="#">HOME</a></li>
-            <li class="navbar-item" id="sections">
+            <ul class="navbar-item" id="sections">
                 <input type="checkbox" id="show">
                 <span>SECCIONES</span>
-            </li>
+                <div class="sections">
+                    <li><a href="#news">Novedades</a></li>
+                    <li><a href="#series">Series</a></li>
+                    <li><a href="#movies">Películas</a></li>
+                    <li><a href="#favorites">Favoritos</a></li>
+                </div>
+            </ul>
             <li class="navbar-item"><a href="index.html">LOGOUT</a></li>
         </ul>
         <input type="search" name="search-bar" id="search-bar" placeholder="Escribe aquí lo que buscas...">
-        <div class="sections">
-            <ul>
-                <li>Novedades</li>
-                <li>Series</li>
-                <li>Películas</li>
-                <li>Favoritos</li>
-            </ul>
-        </div>
+        
+        
+        
     </nav>
     
     <div class="section-container">
-        <h1>NOVEDADES</h1>
+        <h1 id="news">NOVEDADES</h1>
         <div class="card-container">
             <section class="card-section novedades">
                 <article class="card johnwick">
@@ -53,11 +52,10 @@
                                 <span>Sinopsis</span>
                                 <br>
                                 John Wick regresa de nuevo pero con una
-                                recompensa sobre su cabeza que persiguen
-                                unos mercenarios. Tras asesinar a uno de
-                                los miembros de su gremio, Wick es expulsado
-                                y se convierte en el foco de atención
-                                de todos los sicarios de la organización.
+                                recompensa sobre su cabeza...
+                            </p>
+                            <p>
+                                <a href="">Pulsa aquí para más información</a>
                             </p>
                         </div>
                     </div>
@@ -225,7 +223,7 @@
                 </article>
             </section>
         </div>
-        <h1>SERIES</h1>
+        <h1 id="series">SERIES</h1>
         <div class="card-container">
             <section class="card-section novedades">
                 <article class="card johnwick">
@@ -253,7 +251,7 @@
                 </article>
             </section>
         </div>
-        <h1>PELÍCULAS</h1>
+        <h1 id="movies">PELÍCULAS</h1>
         <div class="card-container">
             <section class="card-section novedades">
                 <article class="card johnwick">
@@ -281,7 +279,7 @@
                 </article>
             </section>
         </div>
-        <h1>FAVORITOS</h1>
+        <h1 id="favorites">FAVORITOS</h1>
         <div class="card-container">
             <section class="card-section novedades">
                 <article class="card johnwick">
