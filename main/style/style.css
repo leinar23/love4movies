@@ -49,3 +49,9 @@ button:hover {
     color: var(--darker-color);
     cursor: pointer;
 }
+
+[alt="logo"] {
+    animation-name: clockgo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
