@@ -1,0 +1,39 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.summary {
+    background-color: rgba(0,0,0,.5);
+    width: 900px;
+    height: 500px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    overflow-y: auto;
+    box-shadow: 0px 0px 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.summary::-webkit-scrollbar {
+    background-color: rgba(0,0,0,0);
+    width: 10px;
+}
+
+.summary::-webkit-scrollbar-thumb {
+    background-color: var(--darker-color);
+    border-radius: 20px;
+}
+
+.description {
+    color: var(--lighter-color);
+    padding: 0 30px;
+}
+
+.image > img {
+    height: 500px;
+    width: auto;
+    border-radius: 5px 0 0 5px;
+    position: fixed;
+}
