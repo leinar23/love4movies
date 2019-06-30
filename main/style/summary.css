@@ -8,32 +8,59 @@ main {
 .summary {
     background-color: rgba(0,0,0,.5);
     width: 900px;
-    height: 500px;
+    height: 60vh;
     border-radius: 5px;
     display: grid;
     grid-template-columns: 350px 1fr;
-    overflow-y: auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "portada descripcion";
     box-shadow: 0px 0px 30px 0 rgba(0, 0, 0, 0.5);
-}
-
-.summary::-webkit-scrollbar {
-    background-color: rgba(0,0,0,0);
-    width: 10px;
-}
-
-.summary::-webkit-scrollbar-thumb {
-    background-color: var(--darker-color);
-    border-radius: 20px;
 }
 
 .description {
     color: var(--lighter-color);
     padding: 0 30px;
+    grid-area: descripcion;
+    overflow-y: auto;
 }
 
-.image > img {
-    height: 500px;
-    width: auto;
+.description::-webkit-scrollbar {
+    background-color: rgba(0,0,0,0);
+    width: 10px;
+}
+
+.description::-webkit-scrollbar-thumb {
+    background-color: var(--darker-color);
+    border-radius: 20px;
+}
+
+
+.image {
+    grid-area: portada;
+    background-image: url("../img/novedades/john_wick3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 5px 0 0 5px;
-    position: fixed;
+}
+
+@media all and (max-width: 950px) {
+    .summary {
+        width: 94.99vw;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media all and (max-height: 700px) {
+   .summary {
+       min-height: calc((700px*60)/100);
+       position: relative;
+       top: 25px;
+   }
 }
