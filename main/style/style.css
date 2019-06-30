@@ -1,7 +1,6 @@
 body {
     margin: 0px;
     background-image: url("../img/background-image.jpg");
-    background-size: auto 100vh;
     background-position-x: center;
     background-attachment: fixed;
     font-family: ESE;
@@ -9,7 +8,7 @@ body {
 
 h1 {
     font-family: ESE_light;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 h2 {
